@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include "com_marakana_jniexamples_Hello.h"
+
+JNIEXPORT jstring JNICALL Java_com_marakana_jniexamples_Hello_sayHi(JNIEnv *env, jobject obj, jstring who, jint times) {
+  jint i;
+  jboolean iscopy;
+  const char *name;
+  name = (*env)->GetStringUTFChars(env, who, &iscopy);
+  for (i = 0; i < times; i++) {
+    printf("Hello %s\n", name);
+  }
+  return (*env)->NewStringUTF(env, name);
+}
