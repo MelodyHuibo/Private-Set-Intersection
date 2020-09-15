@@ -10,10 +10,10 @@ extern "C" {
 /*
  * Class:     com_marakana_jniexamples_Hello
  * Method:    sayHi
- * Signature: (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+ * Signature: ([Ljava/lang/String;[Ljava/lang/String;)[Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_com_marakana_jniexamples_Hello_sayHi
-  (JNIEnv *, jobject, jstring, jstring);
+JNIEXPORT jobjectArray JNICALL Java_com_marakana_jniexamples_Hello_sayHi
+  (JNIEnv *, jobject, jobjectArray, jobjectArray);
 
 #ifdef __cplusplus
 }
